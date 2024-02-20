@@ -1,4 +1,5 @@
 package com.example.player;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PathVariable;
 import java.util.ArrayList;
@@ -6,13 +7,14 @@ import java.util.ArrayList;
 @RestController
 public class PlayerController {
     PlayerService playerService;
+
     @GetMapping("/players")
     ArrayList<Player> getAllPlayers() {
         return playerService.getAllPlayers();
     }
 
     @GetMapping("/players/{playerId}")
-    public void getAllPlayerById(@PathVariable ("playerId") int playerId) {
+    public void getAllPlayerById(@PathVariable("playerId") int playerId) {
         playerService.getPlayerbyId(playerId);
     }
 
@@ -22,12 +24,12 @@ public class PlayerController {
     }
 
     @PutMapping("/players/{playerId}")
-    public void updatePlayer(@PathVariable ("playerId") int playerId, @RequestBody Player player) {
-        playerService.updatePlayer(playerId,player);
+    public void updatePlayer(@PathVariable("playerId") int playerId, @RequestBody Player player) {
+        playerService.updatePlayer(playerId, player);
     }
 
     @DeleteMapping("/players/{playerId}")
-    public void deletePlayer(@PathVariable ("playerId") int playerId) {
+    public void deletePlayer(@PathVariable("playerId") int playerId) {
         playerService.deletePlayer(playerId);
     }
 

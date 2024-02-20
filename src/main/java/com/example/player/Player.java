@@ -1,4 +1,3 @@
-// Write your code here.
 package com.example.player;
 
 public class Player {
@@ -14,4 +13,35 @@ public class Player {
         this.role = role;
     }
 
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
+    public int getJerseyNumber() {
+        return jerseyNumber;
+    }
+
+    public void setJerseyNumber(int jerseyNumber) {
+        this.jerseyNumber = jerseyNumber;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
