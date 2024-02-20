@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public interface PlayerRepository {
     ArrayList<Player> getAllPlayers();
 
-    void getPlayerbyId(int playerId);
+    Player getPlayerbyId(int playerId);
 
     void addPlayer(Player player);
 

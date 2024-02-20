@@ -13,14 +13,14 @@ public class PlayerController {
         return playerService.getAllPlayers();
     }
 
-    @GetMapping("/players/{playerId}")
-    public void getAllPlayerById(@PathVariable("playerId") int playerId) {
-        playerService.getPlayerbyId(playerId);
+    @PostMapping("/players")
+    public void addPlayer(@RequestBody Player player) {
+        playerService.addPlayer(player);
     }
 
-    @PostMapping("/players")
-    public void addPlayer(Player player) {
-        playerService.addPlayer(player);
+    @GetMapping("/players/{playerId}")
+    public Player getPlayerById(@PathVariable("playerId") int playerId) {
+        return playerService.getPlayerbyId(playerId);
     }
 
     @PutMapping("/players/{playerId}")

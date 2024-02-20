@@ -31,11 +31,11 @@ public class PlayerService implements PlayerRepository {
     }
 
     @Override
-    public void getPlayerbyId(int playerId) {
+    public Player getPlayerbyId(int playerId) {
         if (!team.containsKey(playerId)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
-        team.get(playerId);
+        return team.get(playerId);
     }
 
     @Override
